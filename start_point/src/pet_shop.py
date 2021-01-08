@@ -76,3 +76,19 @@ def get_pet_shop_name(dict):
 
 def get_total_cash(dict):
     return cc_pet_shop["admin"]["total_cash"]
+
+# why not working???
+def add_or_remove_cash(dict, value):
+    if value > 0:
+        return (get_total_cash(cc_pet_shop)) + value
+    if value < 0:
+        return (get_total_cash(cc_pet_shop)) - value
+    else:
+        return None
+
+# print(get_total_cash(cc_pet_shop))
+# print(add_or_remove_cash(cc_pet_shop, 10))
+
+def get_pets_sold(dict):
+    return cc_pet_shop["admin"]["pets_sold"]
+
