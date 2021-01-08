@@ -71,6 +71,8 @@ cc_pet_shop = {
     "name": "Camelot of Pets"
 }
 
-def get_pet_shop_name(list):
+def get_pet_shop_name(dict):
     return cc_pet_shop["name"]
 
+def get_total_cash(dict):
+    return cc_pet_shop["admin"]["total_cash"]
