@@ -1,94 +1,32 @@
 # WRITE YOUR FUNCTIONS HERE
 
-customers = [
-    {
-        "name": "Alice",
-        "pets": [],
-        "cash": 1000
-    },
-    {
-        "name": "Bob",
-        "pets": [],
-        "cash": 50
-    },
-    {
-        "name": "Jack",
-        "pets": [],
-        "cash": 100
-    }
-    ]
+def get_pet_shop_name(pet_shop):
+    return pet_shop["name"]
 
-new_pet = {
-    "name": "Bors the Younger",
-    "pet_type": "cat",
-    "breed": "Cornish Rex",
-    "price": 100
-}
+def get_total_cash(pet_shop):
+    return pet_shop["admin"]["total_cash"]
 
-cc_pet_shop = {
-    "pets": [
-        {
-            "name": "Sir Percy",
-            "pet_type": "cat",
-            "breed": "British Shorthair",
-            "price": 500
-        },
-        {
-            "name": "King Bagdemagus",
-            "pet_type": "cat",
-            "breed": "British Shorthair",
-            "price": 500
-        },
-        {
-            "name": "Sir Lancelot",
-            "pet_type": "dog",
-            "breed": "Pomsky",
-            "price": 1000,
-        },
-        {
-            "name": "Arthur",
-            "pet_type": "dog",
-            "breed": "Husky",
-            "price": 900,
-        },
-        {
-            "name": "Tristan",
-            "pet_type": "cat",
-            "breed": "Basset Hound",
-            "price": 800,
-        },
-        {
-            "name": "Merlin",
-            "pet_type": "cat",
-            "breed": "Egyptian Mau",
-            "price": 1500,
-        }
-    ],
-    "admin": {
-        "total_cash": 1000,
-        "pets_sold": 0,
-    },
-    "name": "Camelot of Pets"
-}
+# # why not working???
+# def add_or_remove_cash(pet_shop, value):
+#     if value > 0:
+#         return (get_total_cash(pet_shop)) + value
+#     elif value < 0:
+#         return (get_total_cash(pet_shop)) - value
+#     else:
+#         return None
 
-def get_pet_shop_name(dict):
-    return cc_pet_shop["name"]
-
-def get_total_cash(dict):
-    return cc_pet_shop["admin"]["total_cash"]
-
-# why not working???
-def add_or_remove_cash(dict, value):
-    if value > 0:
-        return (get_total_cash(cc_pet_shop)) + value
-    if value < 0:
-        return (get_total_cash(cc_pet_shop)) - value
+def add_or_remove_cash(pet_shop, num):
+    if num > 0:
+        pet_shop["admin"]["total_cash"] += num
     else:
-        return None
+        pet_shop["admin"]["total_cash"] -= num
 
-# print(get_total_cash(cc_pet_shop))
-# print(add_or_remove_cash(cc_pet_shop, 10))
+def get_pets_sold(pet_shop):
+    return pet_shop["admin"]["pets_sold"]
 
-def get_pets_sold(dict):
-    return cc_pet_shop["admin"]["pets_sold"]
+# # def increase_pets_sold(dict, number):
+# #     return dict["admin"]["pets_sold"] = dict["admin"]["pets_sold"] + number
+
+def increase_pets_sold(pet_shop, num_pets):
+    pet_shop["admin"]["pets_sold"] += num_pets
 
