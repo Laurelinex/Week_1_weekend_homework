@@ -1,5 +1,51 @@
 # WRITE YOUR FUNCTIONS HERE
 
+# cc_pet_shop = {
+#     "pets": [
+#         {
+#             "name": "Sir Percy",
+#             "pet_type": "cat",
+#             "breed": "British Shorthair",
+#             "price": 500
+#         },
+#         {
+#             "name": "King Bagdemagus",
+#             "pet_type": "cat",
+#             "breed": "British Shorthair",
+#             "price": 500
+#         },
+#         {
+#             "name": "Sir Lancelot",
+#             "pet_type": "dog",
+#             "breed": "Pomsky",
+#             "price": 1000,
+#         },
+#         {
+#             "name": "Arthur",
+#             "pet_type": "dog",
+#             "breed": "Husky",
+#             "price": 900,
+#         },
+#         {
+#             "name": "Tristan",
+#             "pet_type": "cat",
+#             "breed": "Basset Hound",
+#             "price": 800,
+#         },
+#         {
+#             "name": "Merlin",
+#             "pet_type": "cat",
+#             "breed": "Egyptian Mau",
+#             "price": 1500,
+#         }
+#     ],
+#     "admin": {
+#         "total_cash": 1000,
+#         "pets_sold": 0,
+#     },
+#     "name": "Camelot of Pets"
+# }
+
 def get_pet_shop_name(pet_shop):
     return pet_shop["name"]
 
@@ -32,3 +78,21 @@ def increase_pets_sold(pet_shop, num):
 
 def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
+
+# def get_pets_by_breed(pet_shop, breed):
+#     pets_by_breed = 0
+#     for pet in pet_shop:
+#         if pet_shop["pets"][3]["breed"] == breed:
+#             return len(pet_shop["pets"][3]["breed"])
+#     return pets_by_breed
+
+def get_pets_by_breed(pet_shop, breed):
+    # return [pet for pet in pet_shop["pets"] if pet["breed"] == breed]
+    pets_by_breed = []
+    for pet in pet_shop["pets"]:
+        if pet["breed"] == breed:
+            pets_by_breed.append(pet)
+    return pets_by_breed
+
+# print(get_pets_by_breed(cc_pet_shop, "British Shorthair"))
+
