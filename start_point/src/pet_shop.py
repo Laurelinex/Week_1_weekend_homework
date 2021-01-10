@@ -121,4 +121,5 @@ def remove_pet_by_name(pet_shop, name):
     #         new_pets_list.append(pet)
     # pet_shop["pets"] = new_pets_list
 
-# def add_pet_to_stock(pet_shop, new_pet):
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
