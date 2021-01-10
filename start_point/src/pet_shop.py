@@ -1,5 +1,8 @@
 # WRITE YOUR FUNCTIONS HERE
 
+### GOOD RULE OF THUMB: if function is to get or find sth, needs to return
+### but to remove create or add, ie modifie a value: no return
+
 # cc_pet_shop = {
 #     "pets": [
 #         {
@@ -104,14 +107,18 @@ def find_pet_by_name(pet_shop, name):
             return pet
     return None
 
-# def remove_pet_by_name(pet_shop, name):
+def remove_pet_by_name(pet_shop, name):
+# you can't remove in a loop because indexes
     # for pet in pet_shop["pets"]:
     #     if pet["name"] == name:
-    #         pet = None
-    # pets_by_name = []
-    # for pet in pet_shop["pets"]:
-    #     if pet["breed"] == name:
-    #         pets_by_name.remove(pet)
-    # # return pets_by_name
-            
+    #         pet_shop["pets"].remove(pet["name"])
+    pet = find_pet_by_name(pet_shop, name)
+    pet_shop["pets"].remove(pet)
+
+    # new_pets_list = []
+    # for pets in pet_shop["name"]:
+    #     if pet["name"] != name:
+    #         new_pets_list.append(pet)
+    # pet_shop["pets"] = new_pets_list
+
 # def add_pet_to_stock(pet_shop, new_pet):
