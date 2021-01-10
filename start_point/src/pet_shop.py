@@ -1,50 +1,50 @@
 # WRITE YOUR FUNCTIONS HERE
 
-cc_pet_shop = {
-    "pets": [
-        {
-            "name": "Sir Percy",
-            "pet_type": "cat",
-            "breed": "British Shorthair",
-            "price": 500
-        },
-        {
-            "name": "King Bagdemagus",
-            "pet_type": "cat",
-            "breed": "British Shorthair",
-            "price": 500
-        },
-        {
-            "name": "Sir Lancelot",
-            "pet_type": "dog",
-            "breed": "Pomsky",
-            "price": 1000,
-        },
-        {
-            "name": "Arthur",
-            "pet_type": "dog",
-            "breed": "Husky",
-            "price": 900,
-        },
-        {
-            "name": "Tristan",
-            "pet_type": "cat",
-            "breed": "Basset Hound",
-            "price": 800,
-        },
-        {
-            "name": "Merlin",
-            "pet_type": "cat",
-            "breed": "Egyptian Mau",
-            "price": 1500,
-        }
-    ],
-    "admin": {
-        "total_cash": 1000,
-        "pets_sold": 0,
-    },
-    "name": "Camelot of Pets"
-}
+# cc_pet_shop = {
+#     "pets": [
+#         {
+#             "name": "Sir Percy",
+#             "pet_type": "cat",
+#             "breed": "British Shorthair",
+#             "price": 500
+#         },
+#         {
+#             "name": "King Bagdemagus",
+#             "pet_type": "cat",
+#             "breed": "British Shorthair",
+#             "price": 500
+#         },
+#         {
+#             "name": "Sir Lancelot",
+#             "pet_type": "dog",
+#             "breed": "Pomsky",
+#             "price": 1000,
+#         },
+#         {
+#             "name": "Arthur",
+#             "pet_type": "dog",
+#             "breed": "Husky",
+#             "price": 900,
+#         },
+#         {
+#             "name": "Tristan",
+#             "pet_type": "cat",
+#             "breed": "Basset Hound",
+#             "price": 800,
+#         },
+#         {
+#             "name": "Merlin",
+#             "pet_type": "cat",
+#             "breed": "Egyptian Mau",
+#             "price": 1500,
+#         }
+#     ],
+#     "admin": {
+#         "total_cash": 1000,
+#         "pets_sold": 0,
+#     },
+#     "name": "Camelot of Pets"
+# }
 
 def get_pet_shop_name(pet_shop):
     return pet_shop["name"]
@@ -61,11 +61,13 @@ def get_total_cash(pet_shop):
 #     else:
 #         return None
 
+#IMPORTANT:  if not new variable in test, no need to return anything
+
 def add_or_remove_cash(pet_shop, num):
-    if num > 0:
+    # if num > 0:
         pet_shop["admin"]["total_cash"] += num
-    else:
-        pet_shop["admin"]["total_cash"] -= num
+    # else:
+    #     pet_shop["admin"]["total_cash"] -= num
 
 def get_pets_sold(pet_shop):
     return pet_shop["admin"]["pets_sold"]
@@ -101,3 +103,15 @@ def find_pet_by_name(pet_shop, name):
         if pet["name"] == name:
             return pet
     return None
+
+# def remove_pet_by_name(pet_shop, name):
+    # for pet in pet_shop["pets"]:
+    #     if pet["name"] == name:
+    #         pet = None
+    # pets_by_name = []
+    # for pet in pet_shop["pets"]:
+    #     if pet["breed"] == name:
+    #         pets_by_name.remove(pet)
+    # # return pets_by_name
+            
+# def add_pet_to_stock(pet_shop, new_pet):
